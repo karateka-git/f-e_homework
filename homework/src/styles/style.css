@@ -1,69 +1,16 @@
 body {
     margin: 0;
+    background-color: #f7f9fc;
 }
 
 .main {
     margin: 50px 0 0 50px;
-    background-color: #FFFFFF;
 }
 
-.button_skills {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 0 0 20px 0;
-    background: #e8c734;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    letter-spacing: 1px;
+.post_header__name {
+    text-transform: capitalize;
 }
 
-.skills {
-    padding: 0;
-    list-style-type: none; 
-    margin-top: 0;
-}
-
-.skill__name {
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    margin: 0;
-}
-
-.progress {
-    margin: 10px 0 20px 0;
-    width: 480px;
-    height: 25px;
-    top: 0px;
-    left: 0;
-    border: 2px solid #e7e7e8;
-    background-color: #FFFFFF;
-    position: relative;
-}
-.progress::before {
-    position: absolute;
-    content: '';
-    height: 25px;
-    width: 50%;
-    background-color: #bfc0c1;
-}
-
-.p_communication::before {
-    width: 30%;
-}
-
-.p_creativity::before {
-    width: 35%;
-}
-
-.p_teamwork::before {
-    width: 40%;
-}
-
-.p_organization::before {
-    width: 45%;
-}
-
-.p_teamplayer::before {
-    width: 50%;
+.footer {
+    background: #5c6bc0;
 }
