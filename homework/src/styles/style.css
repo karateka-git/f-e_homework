@@ -1,15 +1,14 @@
 body {
-    margin: 0;
     background-color: #f7f9fc;
-    position: absolute;
     width: 955px; 
-    left: 50%; 
-    margin-left: -427.5px;
+    margin: auto;
     margin-top: 80px;
 }
 
 .header {
+    position: relative;
     margin-bottom: 80px;
+    width: 100%;
 }
 
 .list {
@@ -18,34 +17,43 @@ body {
     list-style: none;
 }
 
-.header__navigation {
+.navigation {
     display: inline-block;
     text-transform: uppercase;
+}
+
+.navigation_header {
     position: absolute;
     right: 0;
 }
 
-.h_navigation__item {
+.navigation__item {
     display: inline;
-    margin-left: 40px;
-    font-family: 'Lato';
-    font-weight: bolder;
-    letter-spacing: 0.1em;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 0.05em;
     font-size: 16px;
 }
 
-.h_navigation__item__link {
+.navigation__item_header {
+    margin-left: 40px;
+    font-weight: bolder;
+}
+
+.navigation__item_header > .item__home {
+    color: #bdbdbd;
+}
+
+.link_navHeaderItem {
     text-decoration: none;
     color: #333333;
     position: relative;
 }
 
 .link_disable {
-    color: #bdbdbd;
     pointer-events: none;
 }
 
-.h_navigation__item__link::after {
+.link_navHeaderItem::after {
     content: '';
     position: absolute;
     height: 3px;
@@ -56,43 +64,52 @@ body {
     transition: left 0.3s ease-in-out;
 }
 
-.h_navigation__item__link:hover:after {
+.link_navHeaderItem:hover:after {
     left: -2px;
 }
 
-.h_navigation__item__link:active {
+.link_navHeaderItem:active {
     color: #5c6bc0;
 }
 
-.h_navigation__item__link:active:after {
+.link_navHeaderItem:active:after {
     content: '';
     height: 0;
 }
 
-.h_navigation__search {
-    background: url(../images/search.png);
-    background-repeat: no-repeat; 
-    background-position-y: 2px; 
+.item__search {  
     display: inline-block;
     width: 20px; 
     height: 19px;
 }
 
-.h_navigation__search:hover {
+.item__search_header {
+    background: url(../images/search.png);
+    background-repeat: no-repeat; 
+    background-position-y: 2px; 
+    background-position: bottom;
+}
+
+.item__search_header:hover {
     background: url(../images/search_hover.png);
     background-repeat: no-repeat; 
     background-position-y: 2px; 
-}
+    background-position: bottom;
+} 
 
-.main__post {
+.post {
     box-shadow: 0 0 25px rgba(0,0,0,0.1);
     background-color: #ffffff;
-    position: relative;
     margin: 0;
     margin-bottom: 50px;
 }
 
-.post__category {
+.post__content {
+    position: relative;
+    padding: 58px 100px 75px 100px;
+}
+
+.content__category {
     background: #5c6bc0;
     text-decoration: none;
     width: 88px;
@@ -100,7 +117,7 @@ body {
     position: absolute;
     right: -11px;
     top: 31px;
-    font-family: 'Lato';
+    font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: bolder;
     text-align: center;
@@ -109,7 +126,7 @@ body {
     text-transform: capitalize;
 }
 
-.post__category:hover {
+.content__category:hover {
     background: #6b79c6;
     line-height: 40px;
     width: 96px;
@@ -118,70 +135,64 @@ body {
     top: 23px;
 }
 
-.post__category:active {
+.content__category:active {
     background: #5360ad;
 }
 
-.post__content {
-    position: relative;
-    padding: 58px 100px 75px 100px;
-}
-
-.post_image {
-    height: 535px;
-    width: 955px;
-}
-.background_img {
+.post__image_background {
     height: 535px;
     width: 955px;
     background:black; 
 }
 
-.post_image:hover {
+.post__image {
+    height: 535px;
+    width: 955px;
+}
+
+.post__image:hover {
     opacity: 0.65;
 }
 
-.content__header {
-    position: relative;
+.content__title {
     border-bottom: 2px solid #eeeeee;
 }
 
-.content_header__date {
+.title__date {
     margin: 0;
     margin-bottom: 25px;
-    font-family: 'Lato';
+    font-family: "Lato", sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: #bdbdbd;
 }
 
-.content_header__headline {
+.title__headline {
     margin: 0;
     margin-bottom: 40px;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 40px;
     line-height: 50px;
     color: #000000;
 }
 
-.content__main {
-    position: relative;
+.content__article {
     margin: 40px 0 50px 0;
     text-align: left;
 }
 
-.content_main__base_text {
+.text_base {
     margin: 0;
     margin-bottom: 25px;
     font-size: 17px;
     line-height: 30px;
     color: #333333;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
 }
 
-.content_main__complementary_text {
-    font-family: "Lato";
+.text_complementary {
+    font-family: "Lato", sans-serif;
     font-style: italic;
     font-size: 25px;
     line-height: 38px;
@@ -190,12 +201,22 @@ body {
     margin-bottom: 30px;
 }
 
-.content_main__idea_text {
+.text_idea {
+    position: relative;
     font-size: 20px;
     line-height: 30px;
     color: #999999;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     padding-left: 30px;
+}
+
+.text_idea::before {
+    content: '';
+    position: absolute;
+    background-color: #999999;
+    height: 100%;
+    width: 4px;
+    left: 0;
 }
 
 .link_in_text {
@@ -207,10 +228,10 @@ body {
 .link_in_text::after {
     content: '';
     position: absolute;
-    height: 2px;
+    height: 1px;
     background-color: #5c6bc0;
     width: calc(100% - 4px);
-    bottom: -4px;
+    bottom: -2px;
     left: -4px;
 }
 
@@ -226,26 +247,26 @@ body {
     left: -15px;
 }
 
-.content_footer__link_more {
+.footer__buttonMore {
     border: 1px solid #ffffff;
-    padding: 30px 15px;
+    padding: 25px 15px;
     color: #5c6bc0;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 21px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.content_footer__link_more:hover {
+.footer__buttonMore:hover {
     border: 1px solid #f1f1f1;
 }
 
-.content_footer__link_more:active {
+.footer__buttonMore:active {
     border: 1px solid #5c6bc0;
 } 
 
-.content_footer__hashtags {
+.footer__hashtag {
     position: absolute;
     right: 0;
     display: inline-block;
@@ -253,9 +274,9 @@ body {
 
 .hashtag_item {
     position: relative;
+    margin-left: 10px;
     text-decoration: none;
-    
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-size: 15px;
     color: #b3b3b3;
 }
@@ -295,40 +316,40 @@ body {
 
 .footer {
     text-align: center;
-    padding: 60px 100px;
+    padding: 60px 255px;
     background: #5c6bc0;
+    margin-left: -127.5px;
+    width: 700px;
 }
 
 .footer__header {
     border-bottom: 2px solid #5765b5;
 }
 
-.footer__navigation {
-    margin: 0;
+.navigation_footer {
+    display: block;
     margin-top: 55px;
     margin-bottom: 40px;
-    text-transform: uppercase;
 }
 
-.f_navigation__item {
-    position: relative;
-    display: inline;
-    font-family: "Lato";
-    font-weight: bold;
-    text-align: right;
-    letter-spacing: 0.1em;
-    font-size: 16px;
-}
-
-.f_navigation__item__link {
-    position: relative;
-    text-decoration: none;
-    color: #f4f5fb;
+.navigation__item_footer {
+    font-weight: bolder;
     margin-right: 35px;
 }
 
+.navigation__item_home {
+    margin-right: 15px;
+}
 
-.f_navigation__item__link::after {
+.link_navFooterItem {
+    position: relative;
+    text-decoration: none;
+    color: #f4f5fb;
+    
+}
+
+
+.link_navFooterItem::after {
     content: '';
     position: absolute;
     height: 1px;
@@ -339,58 +360,55 @@ body {
     transition: left 0.3s ease-in-out;
 }
 
-.f_navigation__item__link:hover:after {
+.link_navFooterItem:hover:after {
     left: 0;
 }
 
-.f_navigation__item__link:active {
+.link_navFooterItem:active {
     color: #f4f5fb;
 }
 
-.f_navigation__item__link:active:after {
+.link_navFooterItem:active:after {
     content: '';
     height: 0;
 }
 
-.f_navigation__search {
-    position: relative;
-    top: 0;
-    display: inline-block;
-    width: 31px; 
-    height: 31px;
+.item__search_footer {
+    background: url(../images/searchFooter.png);
+    background-repeat: no-repeat; 
+    background-position-y: 2px; 
+    background-position: bottom;
 }
 
-.search_img {
-   margin-top: 7px;
-   margin-right: 7px; 
+.navigation__item_search {
+    padding: 3px 3px;
 }
 
-.f_navigation__search:hover {
+.navigation__item_search:hover {
     background: #5360ac;
 }
 
-.f_navigation__home {
-    margin-right: 15px;
+.navigation__item_footer > .item__home {
     color: #9da6d9;
 }
 
-.footer_main__text {
+.main__text_footer {
     margin: 40px 0;
     font-size: 13px;
     line-height: 23px;
     color: #9da6d9;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     text-align: center;
     position: relative;
 }
 
-.footer_main__text::after {
+.main__text_footer::after {
     content: '';
     position: absolute;
     height: 2px;
     background-color: #5765b5;
-    width: 700px;
-    left: 27.5px;
+    width: 80%;
+    left: 10%;
     bottom: -40px;
 }
 
@@ -403,14 +421,14 @@ body {
     margin-bottom: 35px;
     font-size: 14px;
     color: #9da6d9;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
 }
 
 .link_copyright {
     position: relative;
     text-decoration: none;
     color: #f4f5fb;
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
     font-weight: bold;
 }
 
@@ -429,15 +447,48 @@ body {
     left: 0;
 }
 
-.link_soc_net {
-    text-decoration: none;
+.soc-net__item {
+    display: inline-block;
     margin-left: 20px;
+    width: 25px;
+    height: 25px;
+    padding: 3px;
 }
 
-.soc_net_img {
-    padding: 5px;
-}
-
-.soc_net_img:hover {
+.soc-net__item:hover {
     background: #5360ac;
+}
+
+.item {
+    display: inline-block;
+    width: 100%;
+    height: 100%; 
+}
+
+.item_facebook {
+    background: url(../images/soc_networks/facebook.png);
+    background-repeat: no-repeat; 
+    background-position-y: 2px; 
+    background-position: bottom;
+}
+
+.item_instagram {
+    background: url(../images/soc_networks/instagram.png);
+    background-repeat: no-repeat; 
+    background-position-y: 2px; 
+    background-position: bottom;
+}
+
+.item_pinterest {
+    background: url(../images/soc_networks/pinterest.png);
+    background-repeat: no-repeat; 
+    background-position-y: 2px; 
+    background-position: bottom;
+}
+
+.item_twitter {
+    background: url(../images/soc_networks/twitter.png);
+    background-repeat: no-repeat; 
+    background-position-y: 2px; 
+    background-position: bottom;
 }
