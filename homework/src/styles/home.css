@@ -4,7 +4,7 @@ body {
     margin: auto;
     margin-top: 80px;
 }
-
+/*header*/
 .header {
     position: relative;
     margin-bottom: 80px;
@@ -167,14 +167,14 @@ body {
     color: #bdbdbd;
 }
 
-.title__headline {
-    margin: 0;
-    margin-bottom: 40px;
+.title_base {
     font-family: "Lato", sans-serif;
     font-weight: bold;
     font-size: 40px;
     line-height: 50px;
     color: #000000;
+    margin: 0;
+    margin-bottom: 40px;
 }
 
 .content__article {
@@ -313,7 +313,7 @@ body {
     height: 0;
 }
 
-
+/*footer*/
 .footer {
     text-align: center;
     padding: 60px 260px;
