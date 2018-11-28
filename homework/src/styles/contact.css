@@ -1,8 +1,35 @@
+@media screen and (max-width: 2048px) {
+    body {
+        width: 955px; 
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        width: 955px; 
+    }
+}
+@media (max-width: 480px) {
+    body {
+        width: 450px; 
+    }
+}
+@media screen and (max-width: 320px) {
+    body {
+        width: 280px; 
+    }
+}
+
 body {
+    
     background-color: #f7f9fc;
-    width: 955px; 
     margin: auto;
     margin-top: 80px;
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%; 
+    max-width: 100%;
 }
 
 /*header*/
@@ -10,6 +37,11 @@ body {
     position: relative;
     margin-bottom: 80px;
     width: 100%;
+}
+
+.logo {
+    height: 40px;
+    width: 160px;
 }
 
 .list {
@@ -32,7 +64,7 @@ body {
     display: inline;
     font-family: "Lato", sans-serif;
     letter-spacing: 0.05em;
-    font-size: 16px;
+    font-size: 1.6em;
 }
 
 .navigation__item_header {
@@ -99,8 +131,12 @@ body {
 }
 
 /*main*/
-.registration-form {
+.main {
     width: 100%;
+}
+
+.registration-form {
+    
     height: 100%;
     background: #ffffff;
 }
@@ -118,7 +154,7 @@ body {
 .text_base {
     margin: 0;
     margin-bottom: 25px;
-    font-size: 17px;
+    font-size: 1.7em;
     line-height: 30px;
     color: #333333;
     font-family: "Lato", sans-serif;
@@ -127,7 +163,7 @@ body {
 .title_base {
     font-family: "Lato", sans-serif;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 4.0em;
     line-height: 50px;
     color: #000000;
     margin: 0;
@@ -152,8 +188,9 @@ fieldset {
     height: 55px;
     border-style: none;
     outline: none;
+    margin: 0;
     padding-left: 30px;
-    font-size: 20px;
+    font-size: 2em;
     font-family: "Lato", sans-serif;
     caret-color: #a9b0bb;
     background-color: #f7f9fc;
@@ -162,7 +199,6 @@ fieldset {
 
 .input_seven-bits-style::placeholder {
     color: #c1c2c4;
-    font-size: 20px;
     font-family: "Lato", sans-serif;
 }
 
@@ -170,20 +206,42 @@ fieldset {
     color:transparent;
 }
 
+.input__name {
+    width: calc(50% - 50px);
+}
+
+.input__email {
+    margin-left: 35px;
+    width: calc(50% - 50px);
+}
+
+.input__subject {
+    margin-top: 35px;
+    width: 100%;
+}
+
 .input__message {
+    padding-top: 20px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 150px;
     resize: vertical;
 }
 
 .input__submit {
+    position: relative;
+    left: -15px;
     border: none;
     outline: none;
     margin: 0;
+    margin-bottom: 60px;
     background-color: inherit;
     padding: 25px 15px;
     color: #5c6bc0;
     font-family: "Lato", sans-serif;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 2.1em;
     text-transform: uppercase;
 }
 
@@ -197,12 +255,19 @@ fieldset {
 
 /*footer*/
 .footer {
-    text-align: center;
-    padding: 60px 260px;
+    width: 120%;
+    margin-left: -10%;
+    height: 100%;
     background: #5c6bc0;
-    margin-left: -130px;
     margin-top: 50px;
-    width: 700px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__content {
+    margin: auto;
+    width: 70%;
+    text-align: center;
 }
 
 .footer__header {
@@ -277,7 +342,7 @@ fieldset {
 
 .main__text_footer {
     margin: 40px 0;
-    font-size: 13px;
+    font-size: 1.3em;
     line-height: 23px;
     color: #9da6d9;
     font-family: "Lato", sans-serif;
@@ -302,7 +367,7 @@ fieldset {
 .footer__copyright {
     margin: 0px;
     margin-bottom: 35px;
-    font-size: 14px;
+    font-size: 1.4em;
     color: #9da6d9;
     font-family: "Lato", sans-serif;
 }
