@@ -1,15 +1,12 @@
 body {
     background-color: #f7f9fc;
-    width: 955px; 
+    /* width: 955px;  */
+    width: 80%;
     margin: auto;
     margin-top: 80px;
     font-size: 62.5%;
 }
 
-img {
-    width: 100%; 
-    max-width: 100%;
-}
 /*header*/
 .header {
     position: relative;
@@ -18,8 +15,8 @@ img {
 }
 
 .logo {
-    height: 40px;
-    width: 160px;
+    /* width: 160px; */
+    width: auto;
 }
 
 .list {
@@ -29,24 +26,25 @@ img {
 }
 
 .navigation {
-    display: inline-block;
+    
     text-transform: uppercase;
 }
 
 .navigation_header {
+    display: inline-block;
     position: absolute;
     right: 0;
 }
 
 .navigation__item {
-    display: inline;
     font-family: "Lato", sans-serif;
     letter-spacing: 0.05em;
     font-size: 1.6em;
 }
 
 .navigation__item_header {
-    margin-left: 40px;
+    display: inline;
+    margin-left: 40px; 
     font-weight: bolder;
 }
 
@@ -139,32 +137,44 @@ img {
 
 .content__category:hover {
     background: #6b79c6;
-    line-height: 40px;
-    width: 96px;
-    height: 41px;
-    right: -19px;
-    top: 23px;
+    line-height: 35px;
+    width: 92px;
+    height: 37px;
+    right: -17px;
+    top: 27px;
 }
 
 .content__category:active {
     background: #5360ad;
 }
 
-.post__image_background {
-    height: 535px;
-    width: 955px;
-    background:black; 
-}
-
 .post__image {
-    height: 535px;
-    width: 955px;
+    /* height: 535px;
+    width: 955px; */
+    height: 50%;
+    width: 100%;
+    
 }
 
-.post__image:hover {
+.post__image_background {
+    position: relative;
+}
+
+.post__image_background:after{ 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0.5%; 
+    background: rgba(0,0,0,.5); 
+    opacity: 0; 
+}
+
+.post__image_background:hover:after {
     opacity: 0.65;
 }
-
+ 
 .content__title {
     border-bottom: 2px solid #eeeeee;
 }
@@ -256,8 +266,8 @@ img {
 
 .content__footer {
     position: relative;
-    width: 770px;
-    left: -15px;
+    width: 100%;
+    
 }
 
 .footer__buttonMore {
@@ -329,11 +339,16 @@ img {
 /*footer*/
 .footer {
     text-align: center;
-    padding: 60px 260px;
     background: #5c6bc0;
-    margin-left: -130px;
+    padding: 120px 0; 
+    margin-left: -10%;
     margin-top: 50px;
-    width: 700px;
+    width: 120%;
+}
+
+.footer__content {
+    width: 60%;
+    margin: auto;
 }
 
 .footer__header {
@@ -505,4 +520,109 @@ img {
     background-repeat: no-repeat; 
     background-position-y: 2px; 
     background-position: bottom;
+}
+
+@media screen and (max-width: 480px) {
+    .navigation_header {
+        cursor: pointer;
+        background: url(../images/burger.png) no-repeat;
+        height: 40px;
+        width: 40px;
+    }
+
+    .navigation__item_header {
+        display: none;
+        position: relative;
+        right: 70px;
+        top: -10px;
+        margin-left: 0;
+        padding-top: 5px;
+        padding-right: 100px;
+    }
+
+    .navigation_header:hover .navigation__item_header {
+        display: block;  
+    }    
+
+    .navigation__item_header:hover {
+        display: block;
+    }
+
+    .post__content {
+        
+        padding: 58px 40px 75px 40px;
+    }
+
+    .footer__buttonMore {
+        margin-left: -15px;
+    }
+
+    .footer__hashtag {
+        position: unset;
+        display: block;
+        margin-left: -10px;
+        margin-top: 25px;
+    }
+
+    .content__category {
+        right: 0;
+        top: 0;
+    }
+
+    .content__category:hover {
+        right: -6px;
+        top: 4px;
+    }
+
+    .content_image {
+        display: block;
+        margin: auto;
+        padding-right: 0;
+        float: unset;
+    }
+
+    .text_idea::before {
+        width: 2px;        
+    }
+
+    .footer__content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .navigation__item_footer {
+        display: inline-block;
+        margin-right: 2%;
+    }
+
+    .navigation__item_search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .post__content {
+        
+        padding: 58px 10px 75px 10px;
+    }
+
+    .footer__hashtag {
+        margin-left: -5px;
+    }
+
+    .hashtag_item {
+        margin-left: 5px;
+    }
+
+    .navigation__item_footer {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .navigation__item_search {
+        display: none;
+    }
+    .soc-net__item {
+        margin-left: 3%;
+    }
 }

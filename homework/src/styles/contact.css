@@ -1,35 +1,10 @@
-@media screen and (max-width: 2048px) {
-    body {
-        width: 955px; 
-    }
-}
-@media (max-width: 1024px) {
-    body {
-        width: 955px; 
-    }
-}
-@media (max-width: 480px) {
-    body {
-        width: 450px; 
-    }
-}
-@media screen and (max-width: 320px) {
-    body {
-        width: 280px; 
-    }
-}
-
 body {
-    
     background-color: #f7f9fc;
+    /* width: 955px;  */
+    width: 80%;
     margin: auto;
     margin-top: 80px;
     font-size: 62.5%;
-}
-
-img {
-    width: 100%; 
-    max-width: 100%;
 }
 
 /*header*/
@@ -40,8 +15,7 @@ img {
 }
 
 .logo {
-    height: 40px;
-    width: 160px;
+    width: auto;
 }
 
 .list {
@@ -61,13 +35,13 @@ img {
 }
 
 .navigation__item {
-    display: inline;
     font-family: "Lato", sans-serif;
     letter-spacing: 0.05em;
     font-size: 1.6em;
 }
 
 .navigation__item_header {
+    display: inline;
     margin-left: 40px;
     font-weight: bolder;
 }
@@ -148,7 +122,7 @@ img {
 
 .content {
     padding: 0;
-    margin: 0 100px;
+    margin: 0 10%;
 }
 
 .text_base {
@@ -180,7 +154,8 @@ fieldset {
     border-bottom: 2px solid #eeeeee;
 }
 
-.form_input {
+.form__input {
+    position: relative;
     padding-top: 50px;
 }
 
@@ -207,24 +182,25 @@ fieldset {
 }
 
 .input__name {
-    width: calc(50% - 50px);
+    width: calc(50% - 10%);
 }
 
 .input__email {
-    margin-left: 35px;
-    width: calc(50% - 50px);
+    position: absolute;
+    right: 0;
+    width: calc(50% - 10%);
 }
 
 .input__subject {
     margin-top: 35px;
-    width: 100%;
+    width: calc(100% - 30px);
 }
 
 .input__message {
     padding-top: 20px;
     margin-top: 35px;
     margin-bottom: 30px;
-    width: 100%;
+    width: calc(100% - 30px);
     height: 150px;
     resize: vertical;
 }
@@ -255,19 +231,17 @@ fieldset {
 
 /*footer*/
 .footer {
-    width: 120%;
-    margin-left: -10%;
-    height: 100%;
+    text-align: center;
     background: #5c6bc0;
+    padding: 120px 0; 
+    margin-left: -10%;
     margin-top: 50px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    width: 120%;
 }
 
 .footer__content {
+    width: 60%;
     margin: auto;
-    width: 70%;
-    text-align: center;
 }
 
 .footer__header {
@@ -439,4 +413,78 @@ fieldset {
     background-repeat: no-repeat; 
     background-position-y: 2px; 
     background-position: bottom;
+}
+
+@media screen and (max-width: 480px) {
+    .navigation_header {
+        cursor: pointer;
+        background: url(../images/burger.png) no-repeat;
+        height: 40px;
+        width: 40px;
+    }
+
+    .navigation__item_header {
+        display: none;
+        position: relative;
+        right: 70px;
+        top: -10px;
+        margin-left: 0;
+        padding-top: 5px;
+        padding-right: 100px;
+    }
+
+    .navigation_header:hover .navigation__item_header {
+        display: block;  
+    }    
+
+    .navigation__item_header:hover {
+        display: block;
+    }
+
+    .input__name {
+        width: calc(100% - 30px);
+    }
+    
+    .input__email {
+        position: unset;
+        margin-top: 35px;
+        width: calc(100% - 30px);
+    }
+    
+    .input__subject {
+        margin-top: 35px;
+        width: calc(100% - 30px);
+    }
+
+    .footer__content {
+        width: 80%;
+        margin: auto;
+    }
+
+    .navigation__item_footer {
+        display: inline-block;
+        margin-right: 2%;
+    }
+
+    .navigation__item_search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .registration-form_shadow {
+        box-shadow: none;
+        outline: 1px solid #000000;
+    }
+    .navigation__item_footer {
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .navigation__item_search {
+        display: none;
+    }
+    .soc-net__item {
+        margin-left: 3%;
+    }
 }

@@ -11,7 +11,7 @@
     <a class="header__logo" href="./home.html">
         <img class="logo" src="../images/PaloAlto.png" alt="There should be a logo">
     </a>
-    <ul class="navigation navigation_header list">
+    <nav class="navigation navigation_header list">
         <li class="navigation__item navigation__item_header">
             <a class="link_navHeaderItem item__home link_disable" href="./home.html">home</a>
         </li>
@@ -28,20 +28,21 @@
             <a class="item__search item__search_header" href="search.com">             
             </a>
         </li>
-    </ul>
+    </nav>
+
 </header>
 
 <main class="main">
-    <div class="post">
+    <article class="post">
         <div class="post__content">
             <a class="content__category" href="http://travel.com">i do travel</a>
             <header class="content__title">
                 <h3 class="title__date">Sep 20</h3>
                 <h1 class="title_base">No difference how many peaks you reach if there was no pleasure in the climb.</h1>
             </header>
-            <main class="content__article">
+            <div class="content__article">
                 <p class="text_base">Quisque congue lacus mattis massa luctus, nec hendrerit purus aliquet. Ut ac elementum urna. Pellentesque suscipit metus et egestas congue. Duis eu pellentesque turpis, ut maximus metus. Sed ultrices tellus vitae rutrum congue. Fusce luctus augue id nisl suscipit, vel sollicitudin orci egestas. Morbi posuere venenatis ipsum, ac vestibulum quam dignissim efficitur. Ut vitae rutrum augue, in volutpat quam. Cras a viverra ipsum. Aenean ut consequat ex, vitae vulputate nunc. Vestibulum metus nisi, aliquam sed tincidunt sit amet, pretium et augue.</p>
-            </main>
+            </div>
             <footer class="content__footer">
                 <a class="footer__buttonMore" href="www.more.com">read more</a>
                 <div class="footer__hashtag list">
@@ -51,14 +52,14 @@
                 </div>
             </footer>
         </div>
-    </div>
+    </article>
     
-    <div class="post">
+    <article class="post">
         <div class="post__image_background">
             <img class="post__image" src="../images/post_mountains.jpg">
         </div>
         <div class="post__content">
-                <a class="content__category" href="http://observ.com">i do observ</a>
+            <a class="content__category" href="http://observ.com">i do observ</a>
             <header class="content__title">
                 <h3 class="title__date">Sep 18</h3>
                 <h1 class="title_base">You know, I'd rather argue with you, then laugh with anyone else.</h1>
@@ -77,21 +78,21 @@
                 </div>
             </footer>
         </div>
-    </div>
-    <div class="post">
+    </article>
+    <article class="post">
         <div class="post__content">
             <a class="content__category" href="http://reflect.com">do reflect</a>
             <header class="content__title">
                 <h3 class="title__date">Sep 11</h3>
                 <h1 class="title_base">Democracy means simply the bludgeoning of the people by the people for the people.</h1>
             </header>
-            <main class="content__article">
+            <div class="content__article">
                 <img class="content_image" src="../images/post_sculpture.jpg">
                 <p class="text_base">Quisque congue lacus mattis massa luctus, nec hendrerit purus aliquet. Ut ac elementum urna. Pellentesque suscipit metus et egestas congue. Duis eu pellentesque turpis, ut maximus metus. Sed ultrices tellus vitae rutrum congue. Fusce luctus augue id nisl suscipit, vel sollicitudin orci egestas. Morbi posuere venenatis ipsum, ac vestibulum quam dignissim efficitur. Ut vitae rutrum augue, in volutpat quam. Cras a viverra ipsum. Aenean ut consequat ex, vitae vulputate nunc. Vestibulum metus nisi, aliquam sed tincidunt sit amet, pretium et augue.</p>
                 <p class="text_base">Mauris sem odio, rhoncus eget euismod sed, pellentesque sit amet felis. Praesent dictum eleifend dui et efficitur. Nunc non orci in neque sodales semper. Etiam euismod volutpat lorem,<a class="link_in_text" href="www.vestibulum.com"> vestibulum malesuada </a> justo aliquet eget. Nunc lacus ante, varius a euismod eu, finibus commodo erat. Curabitur tincidunt sit amet nunc id interdum. Aliquam augue nisi, venenatis vitae ex at, lobortis fringilla nibh. Proin placerat enim vitae quis orci dignissim, posuere nibh a, eleifend augue. Cras quis metus nec tortor aliquet ullamcorper. Quisque varius porta metus, ut maximus dolor euismod nec. Suspendisse sit amet feugiat turpis.</p>
                 <p class="text_idea">Curabitur ut leo pulvinar, consectetur magna eu, feugiat purus. Morbi hendrerit lectus turpis, a porttitor velit imperdiet id.</p>
                 <p class="text_base">Nunc placerat dolor at lectus hendrerit dignissim. Ut tortor sem, consectetur nec hendrerit ut, ullamcorper ac odio. Donec viverra ligula at quam tincidunt imperdiet. Nulla mattis tincidunt auctor. Nullam scelerisque ante mauris, egestas commodo nisi gravida ultrices. Suspendisse dapibus feugiat tincidunt. Aliquam gravida quam at ipsum sagittis bibendum.</p>
-            </main>
+            </div>
             <footer class="content__footer">
                 <a class="footer__buttonMore" href="www.more.com">read more</a>
                 <div class="footer__hashtag list">
@@ -100,56 +101,58 @@
                 </div>
             </footer>
         </div>
-    </div>
+    </article>
 </main>
 
 
 
 <footer class="footer">
-    <header class="footer__header">
-        <a class="footer__logo" href="./home.html">
-            <img class="logo" src="../images/PaloAltoFooter.png" alt="There should be a logo">
-        </a>
-        <ul class="navigation navigation_footer list">
-            <li class="navigation__item navigation__item_footer navigation__item_home">
-                <a class="link_navFooterItem item__home link_disable" href="./home.html">home</a>
-            </li>
-            <li class="navigation__item navigation__item_footer">
-                <a class="link_navFooterItem item__about" href="aboute.com">about</a>
-            </li>
-            <li class="navigation__item navigation__item_footer">
-                <a class="link_navFooterItem item__archive" href="archive.com">archive</a>
-            </li>
-            <li class="navigation__item navigation__item_footer">
-                <a class="link_navFooterItem item__contact" href="./contact.html">contact</a>
-            </li>
-            <li class="navigation__item navigation__item_footer navigation__item_search">
-                <a class="item__search item__search_footer" href="search.com">
-                </a>
-            </li>
-        </ul>
-    </header>
-    <main class="footer__main">
-        <p class="main__text_footer">Nunc placerat dolor at lectus hendrerit dignissim. Ut tortor sem, consectetur nec hendrerit ut, ullamcorper ac odio. Donec viverra ligula at quam tincidunt imperdiet. Nulla mattis tincidunt auctor.</p>
-    </main>
-    <footer class="footer__footer">
-        <p class="footer__copyright">© 2015 - Palo Alto. All Rights Reserved. Designed & Developed by <a class="link_copyright" href="www.PixelBuddha.com">PixelBuddha Team</a></p>
-        <ul class="soc-net list">
-            <li class="soc-net__item">
-                <a class="item item_facebook" href="http://www.facebook.com"></a>
-            </li>
-            <li class="soc-net__item">
-                <a class="item item_instagram" href="http://www.instagram.com"></a>
-            </li>
-            <li class="soc-net__item">
-                <a class="item item_pinterest" href="http://www.pinterest.com"></a>
-            </li>
-            <li class="soc-net__item">
-                <a class="item item_twitter" href="http://www.twitter.com">
-                </a>
-            </li>
-        </ul>    
-    </footer>
+    <div class="footer__content">
+        <header class="footer__header">
+            <a class="footer__logo" href="./home.html">
+                <img class="logo" src="../images/PaloAltoFooter.png" alt="There should be a logo">
+            </a>
+            <ul class="navigation navigation_footer list">
+                <li class="navigation__item navigation__item_footer navigation__item_home">
+                    <a class="link_navFooterItem item__home link_disable" href="./home.html">home</a>
+                </li>
+                <li class="navigation__item navigation__item_footer">
+                    <a class="link_navFooterItem item__about" href="aboute.com">about</a>
+                </li>
+                <li class="navigation__item navigation__item_footer">
+                    <a class="link_navFooterItem item__archive" href="archive.com">archive</a>
+                </li>
+                <li class="navigation__item navigation__item_footer">
+                    <a class="link_navFooterItem item__contact" href="./contact.html">contact</a>
+                </li>
+                <li class="navigation__item navigation__item_footer navigation__item_search">
+                    <a class="item__search item__search_footer" href="search.com">
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="footer__main">
+            <p class="main__text_footer">Nunc placerat dolor at lectus hendrerit dignissim. Ut tortor sem, consectetur nec hendrerit ut, ullamcorper ac odio. Donec viverra ligula at quam tincidunt imperdiet. Nulla mattis tincidunt auctor.</p>
+        </div>
+        <footer class="footer__footer">
+            <p class="footer__copyright">© 2015 - Palo Alto. All Rights Reserved. Designed & Developed by <a class="link_copyright" href="www.PixelBuddha.com">PixelBuddha Team</a></p>
+            <nav class="soc-net list">
+                <li class="soc-net__item">
+                    <a class="item item_facebook" href="http://www.facebook.com"></a>
+                </li>
+                <li class="soc-net__item">
+                    <a class="item item_instagram" href="http://www.instagram.com"></a>
+                </li>
+                <li class="soc-net__item">
+                    <a class="item item_pinterest" href="http://www.pinterest.com"></a>
+                </li>
+                <li class="soc-net__item">
+                    <a class="item item_twitter" href="http://www.twitter.com">
+                    </a>
+                </li>
+            </nav>    
+        </footer>
+    </div>
 </footer>
 </body>
 </html>
