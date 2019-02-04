@@ -1,0 +1,147 @@
+.main {
+    width: 100%;
+}
+
+.registration-form {
+    
+    height: 100%;
+    background: #ffffff;
+}
+
+
+.registration-form_shadow {
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+.content {
+    padding: 0;
+    margin: 0 10%;
+}
+
+.text_base {
+    margin: 0;
+    margin-bottom: 25px;
+    font-size: 1.7em;
+    line-height: 30px;
+    color: #333333;
+    font-family: "Lato", sans-serif;
+}
+
+.title_base {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 4.0em;
+    line-height: 50px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+fieldset {
+    border:0 none;
+}
+
+.form__title {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.form__input {
+    position: relative;
+    padding-top: 50px;
+}
+
+.input_seven-bits-style {
+    height: 55px;
+    border-style: none;
+    outline: none;
+    margin: 0;
+    padding-left: 30px;
+    font-size: 2em;
+    font-family: "Lato", sans-serif;
+    caret-color: #a9b0bb;
+    background-color: #f7f9fc;
+    color: #282828;
+}
+
+.input_seven-bits-style::placeholder {
+    color: #c1c2c4;
+    font-family: "Lato", sans-serif;
+}
+
+.input_seven-bits-style:focus::placeholder {
+    color:transparent;
+}
+
+.input__name {
+    width: calc(50% - 10%);
+}
+
+.input__email {
+    position: absolute;
+    right: 0;
+    width: calc(50% - 10%);
+}
+
+.input__subject {
+    margin-top: 35px;
+    width: calc(100% - 30px);
+}
+
+.input__message {
+    padding-top: 20px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    width: calc(100% - 30px);
+    height: 150px;
+    resize: vertical;
+}
+
+.input__submit {
+    position: relative;
+    left: -15px;
+    border: none;
+    outline: none;
+    margin: 0;
+    margin-bottom: 60px;
+    background-color: inherit;
+    padding: 25px 15px;
+    color: #5c6bc0;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 2.1em;
+    text-transform: uppercase;
+}
+
+.input__submit:hover {
+    outline: 1px solid #f1f1f1;
+}
+
+.input__submit:active {
+    outline: 1px solid #5c6bc0;
+}
+
+@media screen and (max-width: 480px) {
+    .input__name {
+        width: calc(100% - 30px);
+    }
+    
+    .input__email {
+        position: unset;
+        margin-top: 35px;
+        width: calc(100% - 30px);
+    }
+    
+    .input__subject {
+        margin-top: 35px;
+        width: calc(100% - 30px);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .registration-form_shadow {
+        box-shadow: none;
+        outline: 1px solid #000000;
+    }    
+}
