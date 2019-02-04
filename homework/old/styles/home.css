@@ -362,6 +362,7 @@ body {
 }
 
 .navigation__item_footer {
+    display: inline-block;
     font-weight: bolder;
     margin-right: 35px;
 }
